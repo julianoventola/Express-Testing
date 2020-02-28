@@ -1,6 +1,6 @@
 const path = require('path');
 const express = require('express');
-const handlebars = require('express-handlebars');
+//const handlebars = require('express-handlebars');
 const adminRoutes = require('./routes/admin');
 const userRoutes = require('./routes/shop');
 
@@ -8,12 +8,13 @@ const userRoutes = require('./routes/shop');
 const app = express();
 
 //Using handlebars template engine
-app.engine('handlebars', handlebars());
-app.set('view engine', 'handlebars');
+//app.engine('handlebars', handlebars());
 
 //Using PUG template engine
 //app.set('view engine', 'pug');
+
 // Where is the view engine ('views', 'folder')
+app.set('view engine', 'ejs');
 app.set('views', 'views');
 
 // UrlEncoded for form's data
