@@ -8,7 +8,10 @@ router.get('/add-product', (req, res) => {
   //res.sendFile(path.resolve('./views/add-product.html'));
 
   // Rendering pug template
-  res.render('add-product', { docTitle: 'Add Product' });
+  res.render('add-product', {
+    docTitle: 'Add Product',
+    path: '/admin/add-product',
+  });
 });
 
 router.post('/add-product', (req, res) => {

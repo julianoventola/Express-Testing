@@ -10,7 +10,11 @@ router.get('/', (req, res) => {
   const { products } = adminRoute;
 
   // Rendering pug template
-  res.render('shop', { products, docTitle: 'Shop' });
+  res.render('shop', {
+    products,
+    docTitle: 'Shop',
+    path: '/',
+  });
 });
 
 module.exports = router;
