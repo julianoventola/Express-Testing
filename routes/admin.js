@@ -5,7 +5,10 @@ const router = express.Router();
 const products = [];
 
 router.get('/add-product', (req, res) => {
-  res.sendFile(path.resolve('./views/add-product.html'));
+  //res.sendFile(path.resolve('./views/add-product.html'));
+
+  // Rendering pug template
+  res.render('add-product', { docTitle: 'Add Product' });
 });
 
 router.post('/add-product', (req, res) => {

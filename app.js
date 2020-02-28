@@ -5,6 +5,11 @@ const userRoutes = require('./routes/shop');
 // Create server
 const app = express();
 
+//Using PUG template engine
+app.set('view engine', 'pug');
+// Where is the view engine ('views', 'folder')
+app.set('views', 'views');
+
 // UrlEncoded for form's data
 app.use(express.urlencoded({ extended: false }));
 

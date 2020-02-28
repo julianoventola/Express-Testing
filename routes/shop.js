@@ -5,9 +5,12 @@ const adminRoute = require('./admin');
 const router = express.Router();
 
 router.get('/', (req, res) => {
-  console.log(adminRoute.products);
+  //res.sendFile(path.resolve('./views/shop.html'));
 
-  res.sendFile(path.resolve('./views/shop.html'));
+  const { products } = adminRoute;
+
+  // Rendering pug template
+  res.render('shop', { products, docTitle: 'Shop' });
 });
 
 module.exports = router;
