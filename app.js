@@ -1,12 +1,18 @@
 const path = require('path');
 const express = require('express');
+const handlebars = require('express-handlebars');
 const adminRoutes = require('./routes/admin');
 const userRoutes = require('./routes/shop');
+
 // Create server
 const app = express();
 
+//Using handlebars template engine
+app.engine('handlebars', handlebars());
+app.set('view engine', 'handlebars');
+
 //Using PUG template engine
-app.set('view engine', 'pug');
+//app.set('view engine', 'pug');
 // Where is the view engine ('views', 'folder')
 app.set('views', 'views');
 

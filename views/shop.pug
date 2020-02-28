@@ -6,8 +6,10 @@ block styles
 
 block content
   main
+    //- Check if there is any product
     if products.length > 0
       .grid
+        //- Loop in each product
         each product in products
           article.card.product-item
             header.card__header
