@@ -12,7 +12,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.resolve('./public')));
 
 // "Admin" Route
-app.use(adminRoutes);
+app.use('/admin', adminRoutes.routes);
 // Shop Route
 app.use(userRoutes);
 
