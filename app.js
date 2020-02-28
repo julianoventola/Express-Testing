@@ -6,6 +6,7 @@ const adminRoutes = require('./routes/admin');
 const userRoutes = require('./routes/shop');
 
 app.use(express.urlencoded({ extended: false }));
+app.use(express.static(path.resolve('./public')));
 
 app.use(adminRoutes);
 app.use(userRoutes);
